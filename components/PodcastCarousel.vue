@@ -1,7 +1,7 @@
 <template>
     <div id="podcast-carousel">
 
-        <v-carousel>
+        <v-carousel v-model="carousel">
             <v-carousel-item
             v-for="(item,i) in items"
             :key="i"
@@ -15,7 +15,14 @@
 <script>
   export default {
     name: 'podcast-carousel',
-  }
+    data () {
+      return {
+        carousel: 0, 
+        items: []
+      }
+    }
+  };
+  
 </script>
 
 <style scoped></style>

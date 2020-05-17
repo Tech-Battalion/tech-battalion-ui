@@ -66,9 +66,17 @@
 </template>
 
 <script>
-export default {
-    name: 'nav-drawer-front'
-}
+  export default {
+    name: 'nav-drawer-front',
+    data () {
+      return {
+        drawer: 0, 
+        items: []
+      }
+    }
+  };
+  
 </script>
 
 <style scoped></style>
+
