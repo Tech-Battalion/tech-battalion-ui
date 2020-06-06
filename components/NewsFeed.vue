@@ -1,50 +1,48 @@
 <template>
     <div id="news-feed">
-        <v-container
-        class="fill-height"
-        >
-            <v-row no-gutters>
-            <v-col>
-                <v-card
-                class="pa-2"
-                outlined
-                tile
-                >
-                <v-card-title
-                    class="justify-center"
-                >
-                    Tech News
-                </v-card-title>
-                </v-card>
-            </v-col>
-            </v-row>
 
-            <v-row no-gutters>
-            <template v-for="n in 8">
-                <v-col :key="n">
-                <v-card
-                    class="pa-2"
-                    outlined
-                    tile
+        <v-container
+            class="fill-height"
+        >
+            <h1>News</h1>  
+
+            <v-row
+                v-for="i in 3"
+                :key="i"
+            >
+                <v-col
+                    v-for="j in 3"
+                    :key="j"
                 >
-                    Article 1, 2 , 3
-                </v-card>
+                    <v-card
+                        class="mx-auto"
+                        color="#26c6da"
+                        dark
+                        max-width="400"
+                    >
+                        <v-card-text class="headline font-weight-bold">
+                            {{ normalizedNewsData[i].title }}
+                        </v-card-text>
+                    </v-card>
                 </v-col>
-                <v-responsive
-                v-if="n === 4"
-                :key="`width-${n}`"
-                width="100%"
-                ></v-responsive>
-            </template>
             </v-row>
         </v-container>
     </div>
+    
 </template>
 
 <script>
-export default {
-    name: 'news-feed'
-}
+    export default {
+        name: 'news-feed',
+        props: {
+            newsData: Object,
+        },
+        computed: {
+            normalizedNewsData: function () {
+                return this.newsData.items
+            }
+        }
+    }
 </script>
 
 <style scoped></style>

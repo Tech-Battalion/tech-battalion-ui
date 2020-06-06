@@ -1,21 +1,21 @@
 <template>
   <v-app id="inspire">
 
-    <podcast-carousel />
+    <!-- <podcast-carousel /> -->
 
     <header-bar />
 
     <nav-drawer-front />
 
     <v-content>
-      
-        <news-feed />
+
+        <news-feed :newsData=articleMeta />
         
-        <discussion-board />
+        <!-- <discussion-board />
 
         <support-portal />
 
-        <cash-consult /> 
+        <cash-consult />  -->
         
     </v-content>
 
@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 import PodcastCarousel from '@/components/PodcastCarousel.vue';
 import HeaderBar from '@/components/HeaderBar.vue';
 import NavDrawerFront from '@/components/NavDrawerFront.vue';
@@ -36,6 +38,10 @@ import FooterBar from '@/components/FooterBar.vue';
 
 export default {
   name: 'App',
+  async asyncData (context) {
+            const { data } = await axios.get(`http://127.0.0.1:8000/api/v2/pages/`).catch(error => console.log(error));
+            return { articleMeta: data }
+        },
 
   components: {
     PodcastCarousel,
