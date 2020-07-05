@@ -20,3 +20,11 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+## ToDo
+
+1) Fix background color settings (light teal).
+2) Sort out links for overlay nav drawer such that each item on drawer links to heading on page.
+3) Add content.
+4) Deploy cover page for site while dev in progress.
+5) Finish About and Contact sections.
