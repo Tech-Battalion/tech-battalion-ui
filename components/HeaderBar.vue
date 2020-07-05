@@ -15,7 +15,7 @@
             contain
         ></v-img>
 
-            <v-tabs
+            <!-- <v-tabs
                 centered
             >
                 <v-tab>Podcast
@@ -67,7 +67,7 @@
                 <v-icon>mdi-comment-quote</v-icon>
                 </v-tab>
             
-            </v-tabs>
+            </v-tabs> -->
 
         </v-app-bar>
     </div>

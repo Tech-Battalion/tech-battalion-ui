@@ -1,43 +1,22 @@
 <template>
     <div id="support-portal">
-        <v-container
-        class="fill-height"s
+      
+      <v-container
+            id="support-header"
+            fluid
         >
-            <v-row no-gutters>
-            <v-col>
-                <v-card
-                class="pa-2"
-                outlined
-                tile
-                >
-                <v-card-title
-                    class="justify-center"
-                >
-                    Cloud Support
-                </v-card-title>
-                </v-card>
-            </v-col>
+            <v-row>
+                <v-col>
+                </v-col>
+                <v-col>
+                    <h1 class="text-center">Support</h1>
+                </v-col>
+                <v-col>
+                </v-col>
             </v-row>
 
-            <v-row no-gutters>
-            <template v-for="n in 4">
-                <v-col :key="n">
-                <v-card
-                    class="pa-2"
-                    outlined
-                    tile
-                >
-                    Tutorials | Whitepapers | Key Notes | Docs
-                </v-card>
-                </v-col>
-                <v-responsive
-                v-if="n === 4"
-                :key="`width-${n}`"
-                width="100%"
-                ></v-responsive>
-            </template>
-            </v-row>
         </v-container>
+
     </div>
 </template>
 

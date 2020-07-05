@@ -1,5 +1,9 @@
 <template>
-  <v-app id="inspire">
+  <v-app 
+      id="inspire" 
+      teal
+  >
+  <!-- :style="{background: $vuetify.theme.themes.dark.background}" -->
 
     <!-- <podcast-carousel /> -->
 
@@ -11,11 +15,13 @@
 
         <news-feed :newsData=articleMeta />
         
-        <!-- <discussion-board />
+        <!-- <discussion-board /> -->
 
         <support-portal />
 
-        <cash-consult />  -->
+        <about />
+
+        <cash-consult /> 
         
     </v-content>
 
@@ -30,6 +36,7 @@ import axios from 'axios';
 import PodcastCarousel from '@/components/PodcastCarousel.vue';
 import HeaderBar from '@/components/HeaderBar.vue';
 import NavDrawerFront from '@/components/NavDrawerFront.vue';
+import About from '@/components/About.vue';
 import NewsFeed from '@/components/NewsFeed.vue';
 import DiscussionBoard from '@/components/DiscussionBoard.vue';
 import SupportPortal from '@/components/SupportPortal.vue';
@@ -41,13 +48,14 @@ export default {
   async asyncData (context) {
             const { data } = await axios.get(`http://127.0.0.1:8000/api/v2/pages/`).catch(error => console.log(error));
             return { articleMeta: data }
-        },
+  },
 
   components: {
     PodcastCarousel,
     HeaderBar,
     NavDrawerFront,
     NewsFeed,
+    About,
     DiscussionBoard,
     SupportPortal,
     CashConsult,
