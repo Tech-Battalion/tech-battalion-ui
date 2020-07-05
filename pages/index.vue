@@ -9,8 +9,6 @@
 
     <header-bar />
 
-    <nav-drawer-front />
-
     <v-content>
 
         <news-feed :newsData=articleMeta />
@@ -35,7 +33,6 @@ import axios from 'axios';
 
 import PodcastCarousel from '@/components/PodcastCarousel.vue';
 import HeaderBar from '@/components/HeaderBar.vue';
-import NavDrawerFront from '@/components/NavDrawerFront.vue';
 import About from '@/components/About.vue';
 import NewsFeed from '@/components/NewsFeed.vue';
 import DiscussionBoard from '@/components/DiscussionBoard.vue';
@@ -53,7 +50,6 @@ export default {
   components: {
     PodcastCarousel,
     HeaderBar,
-    NavDrawerFront,
     NewsFeed,
     About,
     DiscussionBoard,
