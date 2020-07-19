@@ -15,7 +15,7 @@
         
         <!-- <discussion-board /> -->
 
-        <support-portal />
+        <!-- <support-portal /> -->
 
         <about />
 
@@ -43,7 +43,7 @@ import FooterBar from '@/components/FooterBar.vue';
 export default {
   name: 'App',
   async asyncData (context) {
-            const { data } = await axios.get(`http://127.0.0.1:8000/api/v2/pages/`).catch(error => console.log(error));
+            const { data } = await axios.get(`http://127.0.0.1:8080/api/v2/pages/`).catch(error => console.log(error));
             return { articleMeta: data }
   },
 

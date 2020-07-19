@@ -1,9 +1,10 @@
 <template>
     <div id="news-feed">
 
-        <v-container
+        <!-- <v-container
             id="news-header"
             fluid
+            class="blue-grey lighten-1"
         >
             <v-row>
                 <v-col>
@@ -15,11 +16,12 @@
                 </v-col>
             </v-row>
 
-        </v-container>
+        </v-container> -->
 
         <v-container
             fluid
             id="news-body"
+            class="blue-grey lighten-1"
         >
 
             <v-row
@@ -30,13 +32,16 @@
                     v-for="j in 3"
                     :key="j"
                 >
-                    <v-card class="d-inline-block mx-auto" :elevation=10>
+                    <v-card 
+                        class="d-inline-block mx-auto" :elevation=10
+                        color="blue-grey lighten-1"
+                    >
 
                         <v-container>
 
                             <v-card-text class="headline font-weight-bold">
                                 <!-- {{ normalizedNewsData[i].title }} -->
-                                Man Shot and Survived by Heroically Swinging like Spiderman
+                                <p>Man Shot and Survived by Heroically Swinging like Spiderman</p>
                             </v-card-text>
 
                             <v-row justify="space-between">
@@ -100,4 +105,8 @@
     }
 </script>
 
-<style scoped></style>
+<style scoped>
+    p {
+        color: white;
+    }
+</style>

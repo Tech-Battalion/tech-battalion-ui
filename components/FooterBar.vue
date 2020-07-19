@@ -1,7 +1,7 @@
 <template>
     <div id="footer-bar">
        <v-footer 
-        color="teal"
+        color="blue-grey lighten-1"
         app>
         <span>&copy; 2020</span>
         </v-footer>
